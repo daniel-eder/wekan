@@ -92,7 +92,7 @@ export class TrelloCreator {
     check(
       trelloBoard,
       Match.ObjectIncluding({
-        closed: Boolean,
+        // closed: Boolean,  // issue #3840, should import closed Trello boards
         name: String,
         prefs: Match.ObjectIncluding({
           // XXX refine control by validating 'background' against a list of
@@ -157,9 +157,14 @@ export class TrelloCreator {
 
   // You must call parseActions before calling this one.
   createBoardAndLabels(trelloBoard) {
+    let color = 'blue';
+    if (this.getColor(trelloBoard.prefs.background) !== undefined) {
+      color = this.getColor(trelloBoard.prefs.background);
+    }
+
     const boardToCreate = {
       archived: trelloBoard.closed,
-      color: this.getColor(trelloBoard.prefs.background),
+      color: color,
       // very old boards won't have a creation activity so no creation date
       createdAt: this._now(this.createdAt.board),
       labels: [],

@@ -58,9 +58,8 @@ template(name="addListForm")
                     | {{_ 'or'}}
                     a.js-list-template {{_ 'template'}}
           else
-            a.open-list-composer.js-open-inlined-form
+            a.open-list-composer.js-open-inlined-form(title="{{_ 'add-list'}}")
               i.fa.fa-plus
-              | {{_ 'add-list'}}
 
 template(name="moveSwimlanePopup")
   unless currentUser.isWorker
@@ -68,6 +67,16 @@ template(name="moveSwimlanePopup")
     select.js-select-boards(autofocus)
       each toBoard in toBoards
         option(value="{{toBoard._id}}") {{toBoard.title}}
+
+  .edit-controls.clearfix
+    button.primary.confirm.js-done {{_ 'done'}}
+
+template(name="copySwimlanePopup")
+  unless currentUser.isWorker
+    label {{_ 'boards'}}:
+    select.js-select-boards(autofocus)
+      each toBoard in toBoards
+        option(value="{{toBoard._id}}" selected="{{#if $eq toBoard.title board.title}}1{{/if}}") {{toBoard.title}}
 
   .edit-controls.clearfix
     button.primary.confirm.js-done {{_ 'done'}}

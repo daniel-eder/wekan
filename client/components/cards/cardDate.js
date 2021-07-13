@@ -187,7 +187,7 @@ class CardStartDate extends CardDate {
     // if dueAt or endAt exist & are > startAt, startAt doesn't need to be flagged
     if ((endAt && theDate.isAfter(endAt)) || (dueAt && theDate.isAfter(dueAt)))
       classes += 'long-overdue';
-    else if (theDate.isBefore(now, 'minute')) classes += 'almost-due';
+    else if (theDate.isAfter(now)) classes += '';
     else classes += 'current';
     return classes;
   }
@@ -354,3 +354,30 @@ class VoteEndDate extends CardDate {
   }
 }
 VoteEndDate.register('voteEndDate');
+
+class PokerEndDate extends CardDate {
+  onCreated() {
+    super.onCreated();
+    const self = this;
+    self.autorun(() => {
+      self.date.set(moment(self.data().getPokerEnd()));
+    });
+  }
+  classes() {
+    const classes = 'end-date' + ' ';
+    return classes;
+  }
+  showDate() {
+    return this.date.get().format('l LT');
+  }
+  showTitle() {
+    return `${TAPi18n.__('card-end-on')} ${this.date.get().format('LLLL')}`;
+  }
+
+  events() {
+    return super.events().concat({
+      'click .js-edit-date': Popup.open('editPokerEndDate'),
+    });
+  }
+}
+PokerEndDate.register('pokerEndDate');

@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Wekan REST API v5.22</title>
+    <title>Wekan REST API v5.37</title>
 
     <style>
     </style>
@@ -1487,6 +1487,10 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
 <!-- backwards compatibility -->
 <!-- backwards compatibility -->
 <!-- backwards compatibility -->
+<!-- backwards compatibility -->
+<!-- backwards compatibility -->
+<!-- backwards compatibility -->
+<!-- backwards compatibility -->
   </head>
 
   <body data-languages="[&quot;shell&quot;,&quot;http&quot;,&quot;javascript&quot;,&quot;javascript--nodejs&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;java&quot;,&quot;go&quot;,&quot;php&quot;]">
@@ -1549,7 +1553,7 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
 	  	<ul class="toc-list-h1">
         
           <li>
-            <a href="#wekan-rest-api" class="toc-h1 toc-link" data-title="Wekan REST API v5.22">Wekan REST API v5.22</a>
+            <a href="#wekan-rest-api" class="toc-h1 toc-link" data-title="Wekan REST API v5.37">Wekan REST API v5.37</a>
             
           </li>
         
@@ -2008,6 +2012,11 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
                   </li>
                 
                   <li>
+                    <a href="#tocs_cardspoker" class="toc-h2 toc-link" data-title="">CardsPoker</a>
+                    
+                  </li>
+                
+                  <li>
                     <a href="#tocs_cardscustomfields" class="toc-h2 toc-link" data-title="">CardsCustomfields</a>
                     
                   </li>
@@ -2063,17 +2072,32 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
                   </li>
                 
                   <li>
-                    <a href="#tocs_usersemails" class="toc-h2 toc-link" data-title="">UsersEmails</a>
-                    
-                  </li>
-                
-                  <li>
                     <a href="#tocs_usersprofile" class="toc-h2 toc-link" data-title="">UsersProfile</a>
                     
                   </li>
                 
                   <li>
                     <a href="#tocs_userssessiondata" class="toc-h2 toc-link" data-title="">UsersSessiondata</a>
+                    
+                  </li>
+                
+                  <li>
+                    <a href="#tocs_usersorgs" class="toc-h2 toc-link" data-title="">UsersOrgs</a>
+                    
+                  </li>
+                
+                  <li>
+                    <a href="#tocs_usersteams" class="toc-h2 toc-link" data-title="">UsersTeams</a>
+                    
+                  </li>
+                
+                  <li>
+                    <a href="#tocs_usersemails" class="toc-h2 toc-link" data-title="">UsersEmails</a>
+                    
+                  </li>
+                
+                  <li>
+                    <a href="#tocs_usersprofilenotifications" class="toc-h2 toc-link" data-title="">UsersProfileNotifications</a>
                     
                   </li>
                 
@@ -2092,7 +2116,7 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id="wekan-rest-api">Wekan REST API v5.22</h1>
+        <h1 id="wekan-rest-api">Wekan REST API v5.37</h1>
 <blockquote>
 <p>Scroll down for code samples, example requests and responses. Select a language for code samples from the tabs above or the mobile navigation menu.</p>
 </blockquote>
@@ -3510,6 +3534,7 @@ System.out.println(response.toString());
   <span class="hljs-attr">&quot;allowsAssignee&quot;</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;allowsMembers&quot;</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;allowsRequestedBy&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">&quot;allowsCardSortingByNumber&quot;</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;allowsAssignedBy&quot;</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;allowsReceivedDate&quot;</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;allowsStartDate&quot;</span>: <span class="hljs-literal">true</span>,
@@ -9042,7 +9067,52 @@ System.out.println(response.toString());
     <span class="hljs-attr">&quot;end&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;public&quot;</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">&quot;allowNonBoardMembers&quot;</span>: <span class="hljs-literal">true</span>
-  }
+  },
+  <span class="hljs-attr">&quot;poker&quot;</span>: {
+    <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;one&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;two&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;three&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;five&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;eight&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;thirteen&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;twenty&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;forty&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;oneHundred&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;unsure&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;end&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;allowNonBoardMembers&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;estimation&quot;</span>: <span class="hljs-number">0</span>
+  },
+  <span class="hljs-attr">&quot;targetId_gantt&quot;</span>: [
+    <span class="hljs-string">&quot;string&quot;</span>
+  ],
+  <span class="hljs-attr">&quot;linkType_gantt&quot;</span>: [
+    <span class="hljs-number">0</span>
+  ],
+  <span class="hljs-attr">&quot;linkId_gantt&quot;</span>: [
+    <span class="hljs-string">&quot;string&quot;</span>
+  ]
 }
 </code></pre>
 <h3 id="get_card-responses">Responses</h3>
@@ -9093,6 +9163,7 @@ Accept: application/json
   &quot;description&quot;: &quot;string&quot;,
   &quot;color&quot;: &quot;string&quot;,
   &quot;vote&quot;: {},
+  &quot;poker&quot;: {},
   &quot;labelIds&quot;: &quot;string&quot;,
   &quot;requestedBy&quot;: &quot;string&quot;,
   &quot;assignedBy&quot;: &quot;string&quot;,
@@ -9136,6 +9207,7 @@ fetch(<span class="hljs-string">&#x27;/api/boards/{board}/lists/{list}/cards/{ca
   <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-string">&quot;color&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-string">&quot;vote&quot;</span>: {},
+  <span class="hljs-string">&quot;poker&quot;</span>: {},
   <span class="hljs-string">&quot;labelIds&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-string">&quot;requestedBy&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-string">&quot;assignedBy&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -9284,6 +9356,7 @@ System.out.println(response.toString());
 <span class="hljs-attr">description:</span> <span class="hljs-string">string</span>
 <span class="hljs-attr">color:</span> <span class="hljs-string">string</span>
 <span class="hljs-attr">vote:</span> {}
+<span class="hljs-attr">poker:</span> {}
 <span class="hljs-attr">labelIds:</span> <span class="hljs-string">string</span>
 <span class="hljs-attr">requestedBy:</span> <span class="hljs-string">string</span>
 <span class="hljs-attr">assignedBy:</span> <span class="hljs-string">string</span>
@@ -9382,6 +9455,13 @@ System.out.println(response.toString());
 <td>object</td>
 <td>false</td>
 <td>the vote object</td>
+</tr>
+<tr>
+<td>» poker</td>
+<td>body</td>
+<td>object</td>
+<td>false</td>
+<td>the poker object</td>
 </tr>
 <tr>
 <td>» labelIds</td>
@@ -15892,6 +15972,18 @@ System.out.println(response.toString());
 </blockquote>
 <pre class="highlight tab tab-json"><code>{
   <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;orgs&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;orgId&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;orgDisplayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }
+  ],
+  <span class="hljs-attr">&quot;teams&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;teamId&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;teamDisplayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }
+  ],
   <span class="hljs-attr">&quot;emails&quot;</span>: [
     {
       <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -15908,6 +16000,7 @@ System.out.println(response.toString());
     <span class="hljs-attr">&quot;fullname&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;showDesktopDragHandles&quot;</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">&quot;hideCheckedItems&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;cardMaximized&quot;</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">&quot;hiddenSystemMessages&quot;</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">&quot;hiddenMinicardLabelText&quot;</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">&quot;initials&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -15915,9 +16008,12 @@ System.out.println(response.toString());
       <span class="hljs-string">&quot;string&quot;</span>
     ],
     <span class="hljs-attr">&quot;language&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;notifications&quot;</span>: [],
-    <span class="hljs-attr">&quot;activity&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;read&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;notifications&quot;</span>: [
+      {
+        <span class="hljs-attr">&quot;activity&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;read&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+      }
+    ],
     <span class="hljs-attr">&quot;showCardsCountAt&quot;</span>: <span class="hljs-number">0</span>,
     <span class="hljs-attr">&quot;startDayOfWeek&quot;</span>: <span class="hljs-number">0</span>,
     <span class="hljs-attr">&quot;starredBoards&quot;</span>: [
@@ -15938,8 +16034,7 @@ System.out.println(response.toString());
   <span class="hljs-attr">&quot;loginDisabled&quot;</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;authenticationMethod&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;sessionData&quot;</span>: {
-    <span class="hljs-attr">&quot;totalHits&quot;</span>: <span class="hljs-number">0</span>,
-    <span class="hljs-attr">&quot;lastHit&quot;</span>: <span class="hljs-number">0</span>
+    <span class="hljs-attr">&quot;totalHits&quot;</span>: <span class="hljs-number">0</span>
   },
   <span class="hljs-attr">&quot;importUsernames&quot;</span>: [
     <span class="hljs-string">&quot;string&quot;</span>
@@ -16630,6 +16725,18 @@ System.out.println(response.toString());
 </blockquote>
 <pre class="highlight tab tab-json"><code>{
   <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;orgs&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;orgId&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;orgDisplayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }
+  ],
+  <span class="hljs-attr">&quot;teams&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;teamId&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;teamDisplayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }
+  ],
   <span class="hljs-attr">&quot;emails&quot;</span>: [
     {
       <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -16646,6 +16753,7 @@ System.out.println(response.toString());
     <span class="hljs-attr">&quot;fullname&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;showDesktopDragHandles&quot;</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">&quot;hideCheckedItems&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;cardMaximized&quot;</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">&quot;hiddenSystemMessages&quot;</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">&quot;hiddenMinicardLabelText&quot;</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">&quot;initials&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -16653,9 +16761,12 @@ System.out.println(response.toString());
       <span class="hljs-string">&quot;string&quot;</span>
     ],
     <span class="hljs-attr">&quot;language&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;notifications&quot;</span>: [],
-    <span class="hljs-attr">&quot;activity&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;read&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;notifications&quot;</span>: [
+      {
+        <span class="hljs-attr">&quot;activity&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;read&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+      }
+    ],
     <span class="hljs-attr">&quot;showCardsCountAt&quot;</span>: <span class="hljs-number">0</span>,
     <span class="hljs-attr">&quot;startDayOfWeek&quot;</span>: <span class="hljs-number">0</span>,
     <span class="hljs-attr">&quot;starredBoards&quot;</span>: [
@@ -16676,8 +16787,7 @@ System.out.println(response.toString());
   <span class="hljs-attr">&quot;loginDisabled&quot;</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;authenticationMethod&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;sessionData&quot;</span>: {
-    <span class="hljs-attr">&quot;totalHits&quot;</span>: <span class="hljs-number">0</span>,
-    <span class="hljs-attr">&quot;lastHit&quot;</span>: <span class="hljs-number">0</span>
+    <span class="hljs-attr">&quot;totalHits&quot;</span>: <span class="hljs-number">0</span>
   },
   <span class="hljs-attr">&quot;importUsernames&quot;</span>: [
     <span class="hljs-string">&quot;string&quot;</span>
@@ -18202,6 +18312,7 @@ UserSecurity
   <span class="hljs-attr">&quot;allowsAssignee&quot;</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;allowsMembers&quot;</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;allowsRequestedBy&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">&quot;allowsCardSortingByNumber&quot;</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;allowsAssignedBy&quot;</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;allowsReceivedDate&quot;</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;allowsStartDate&quot;</span>: <span class="hljs-literal">true</span>,
@@ -18282,8 +18393,8 @@ UserSecurity
 </tr>
 <tr>
 <td>labels</td>
-<td>[<a href="#schemaboardslabels">BoardsLabels</a>]</td>
-<td>true</td>
+<td>[<a href="#schemaboardslabels">BoardsLabels</a>]¦null</td>
+<td>false</td>
 <td>none</td>
 <td>List of labels attached to a board</td>
 </tr>
@@ -18426,6 +18537,13 @@ UserSecurity
 <td>true</td>
 <td>none</td>
 <td>Does the board allows requested by?</td>
+</tr>
+<tr>
+<td>allowsCardSortingByNumber</td>
+<td>boolean</td>
+<td>true</td>
+<td>none</td>
+<td>Does the board allows card sorting by number?</td>
 </tr>
 <tr>
 <td>allowsAssignedBy</td>
@@ -18991,7 +19109,52 @@ UserSecurity
     <span class="hljs-attr">&quot;end&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;public&quot;</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">&quot;allowNonBoardMembers&quot;</span>: <span class="hljs-literal">true</span>
-  }
+  },
+  <span class="hljs-attr">&quot;poker&quot;</span>: {
+    <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;one&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;two&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;three&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;five&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;eight&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;thirteen&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;twenty&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;forty&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;oneHundred&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;unsure&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;end&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;allowNonBoardMembers&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;estimation&quot;</span>: <span class="hljs-number">0</span>
+  },
+  <span class="hljs-attr">&quot;targetId_gantt&quot;</span>: [
+    <span class="hljs-string">&quot;string&quot;</span>
+  ],
+  <span class="hljs-attr">&quot;linkType_gantt&quot;</span>: [
+    <span class="hljs-number">0</span>
+  ],
+  <span class="hljs-attr">&quot;linkId_gantt&quot;</span>: [
+    <span class="hljs-string">&quot;string&quot;</span>
+  ]
 }
 
 </code></pre>
@@ -19191,8 +19354,8 @@ UserSecurity
 </tr>
 <tr>
 <td>sort</td>
-<td>number</td>
-<td>true</td>
+<td>number¦null</td>
+<td>false</td>
 <td>none</td>
 <td>Sort value</td>
 </tr>
@@ -19223,6 +19386,34 @@ UserSecurity
 <td>false</td>
 <td>none</td>
 <td>none</td>
+</tr>
+<tr>
+<td>poker</td>
+<td><a href="#schemacardspoker">CardsPoker</a></td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>targetId_gantt</td>
+<td>[string]¦null</td>
+<td>false</td>
+<td>none</td>
+<td>ID of card which is the child link in gantt view</td>
+</tr>
+<tr>
+<td>linkType_gantt</td>
+<td>[number]¦null</td>
+<td>false</td>
+<td>none</td>
+<td>ID of card which is the parent link in gantt view</td>
+</tr>
+<tr>
+<td>linkId_gantt</td>
+<td>[string]¦null</td>
+<td>false</td>
+<td>none</td>
+<td>ID of card which is the parent link in gantt view</td>
 </tr>
 </tbody>
 </table>
@@ -19412,6 +19603,161 @@ UserSecurity
 </tr>
 </tbody>
 </table>
+<h2 id="tocs_cardspoker">CardsPoker</h2>
+<p><a id="schemacardspoker"></a>
+<a id="schema_CardsPoker"></a>
+<a id="tocScardspoker"></a>
+<a id="tocscardspoker"></a></p>
+<pre class="highlight tab tab-json"><code>{
+  <span class="hljs-attr">&quot;question&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">&quot;one&quot;</span>: [
+    <span class="hljs-string">&quot;string&quot;</span>
+  ],
+  <span class="hljs-attr">&quot;two&quot;</span>: [
+    <span class="hljs-string">&quot;string&quot;</span>
+  ],
+  <span class="hljs-attr">&quot;three&quot;</span>: [
+    <span class="hljs-string">&quot;string&quot;</span>
+  ],
+  <span class="hljs-attr">&quot;five&quot;</span>: [
+    <span class="hljs-string">&quot;string&quot;</span>
+  ],
+  <span class="hljs-attr">&quot;eight&quot;</span>: [
+    <span class="hljs-string">&quot;string&quot;</span>
+  ],
+  <span class="hljs-attr">&quot;thirteen&quot;</span>: [
+    <span class="hljs-string">&quot;string&quot;</span>
+  ],
+  <span class="hljs-attr">&quot;twenty&quot;</span>: [
+    <span class="hljs-string">&quot;string&quot;</span>
+  ],
+  <span class="hljs-attr">&quot;forty&quot;</span>: [
+    <span class="hljs-string">&quot;string&quot;</span>
+  ],
+  <span class="hljs-attr">&quot;oneHundred&quot;</span>: [
+    <span class="hljs-string">&quot;string&quot;</span>
+  ],
+  <span class="hljs-attr">&quot;unsure&quot;</span>: [
+    <span class="hljs-string">&quot;string&quot;</span>
+  ],
+  <span class="hljs-attr">&quot;end&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;allowNonBoardMembers&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">&quot;estimation&quot;</span>: <span class="hljs-number">0</span>
+}
+
+</code></pre>
+<h3 id="properties-7">Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>question</td>
+<td>boolean</td>
+<td>true</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>one</td>
+<td>[string]</td>
+<td>false</td>
+<td>none</td>
+<td>poker card one</td>
+</tr>
+<tr>
+<td>two</td>
+<td>[string]</td>
+<td>false</td>
+<td>none</td>
+<td>poker card two</td>
+</tr>
+<tr>
+<td>three</td>
+<td>[string]</td>
+<td>false</td>
+<td>none</td>
+<td>poker card three</td>
+</tr>
+<tr>
+<td>five</td>
+<td>[string]</td>
+<td>false</td>
+<td>none</td>
+<td>poker card five</td>
+</tr>
+<tr>
+<td>eight</td>
+<td>[string]</td>
+<td>false</td>
+<td>none</td>
+<td>poker card eight</td>
+</tr>
+<tr>
+<td>thirteen</td>
+<td>[string]</td>
+<td>false</td>
+<td>none</td>
+<td>poker card thirteen</td>
+</tr>
+<tr>
+<td>twenty</td>
+<td>[string]</td>
+<td>false</td>
+<td>none</td>
+<td>poker card twenty</td>
+</tr>
+<tr>
+<td>forty</td>
+<td>[string]</td>
+<td>false</td>
+<td>none</td>
+<td>poker card forty</td>
+</tr>
+<tr>
+<td>oneHundred</td>
+<td>[string]</td>
+<td>false</td>
+<td>none</td>
+<td>poker card oneHundred</td>
+</tr>
+<tr>
+<td>unsure</td>
+<td>[string]</td>
+<td>false</td>
+<td>none</td>
+<td>poker card unsure</td>
+</tr>
+<tr>
+<td>end</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>allowNonBoardMembers</td>
+<td>boolean</td>
+<td>true</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>estimation</td>
+<td>number</td>
+<td>false</td>
+<td>none</td>
+<td>poker estimation value</td>
+</tr>
+</tbody>
+</table>
 <h2 id="tocs_cardscustomfields">CardsCustomfields</h2>
 <p><a id="schemacardscustomfields"></a>
 <a id="schema_CardsCustomfields"></a>
@@ -19420,7 +19766,7 @@ UserSecurity
 <pre class="highlight tab tab-json"><code>{}
 
 </code></pre>
-<h3 id="properties-7">Properties</h3>
+<h3 id="properties-8">Properties</h3>
 <p><em>None</em></p>
 <h2 id="tocs_checklistitems">ChecklistItems</h2>
 <p><a id="schemachecklistitems"></a>
@@ -19439,7 +19785,7 @@ UserSecurity
 
 </code></pre>
 <p>An item in a checklist</p>
-<h3 id="properties-8">Properties</h3>
+<h3 id="properties-9">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -19518,7 +19864,7 @@ UserSecurity
 
 </code></pre>
 <p>A Checklist</p>
-<h3 id="properties-9">Properties</h3>
+<h3 id="properties-10">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -19603,7 +19949,7 @@ UserSecurity
 
 </code></pre>
 <p>A custom field on a card in the board</p>
-<h3 id="properties-10">Properties</h3>
+<h3 id="properties-11">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -19741,7 +20087,7 @@ UserSecurity
 }
 
 </code></pre>
-<h3 id="properties-11">Properties</h3>
+<h3 id="properties-12">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -19791,7 +20137,7 @@ UserSecurity
 <pre class="highlight tab tab-json"><code>{}
 
 </code></pre>
-<h3 id="properties-12">Properties</h3>
+<h3 id="properties-13">Properties</h3>
 <p><em>None</em></p>
 <h2 id="tocs_integrations">Integrations</h2>
 <p><a id="schemaintegrations"></a>
@@ -19815,7 +20161,7 @@ UserSecurity
 
 </code></pre>
 <p>Integration with third-party applications</p>
-<h3 id="properties-13">Properties</h3>
+<h3 id="properties-14">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -19926,7 +20272,7 @@ UserSecurity
 
 </code></pre>
 <p>A list (column) in the Wekan board.</p>
-<h3 id="properties-14">Properties</h3>
+<h3 id="properties-15">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -20154,7 +20500,7 @@ UserSecurity
 }
 
 </code></pre>
-<h3 id="properties-15">Properties</h3>
+<h3 id="properties-16">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -20209,7 +20555,7 @@ UserSecurity
 
 </code></pre>
 <p>A swimlane is an line in the kaban board.</p>
-<h3 id="properties-16">Properties</h3>
+<h3 id="properties-17">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -20411,6 +20757,18 @@ UserSecurity
 <a id="tocsusers"></a></p>
 <pre class="highlight tab tab-json"><code>{
   <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;orgs&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;orgId&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;orgDisplayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }
+  ],
+  <span class="hljs-attr">&quot;teams&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;teamId&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;teamDisplayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }
+  ],
   <span class="hljs-attr">&quot;emails&quot;</span>: [
     {
       <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -20427,6 +20785,7 @@ UserSecurity
     <span class="hljs-attr">&quot;fullname&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;showDesktopDragHandles&quot;</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">&quot;hideCheckedItems&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;cardMaximized&quot;</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">&quot;hiddenSystemMessages&quot;</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">&quot;hiddenMinicardLabelText&quot;</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">&quot;initials&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -20434,9 +20793,12 @@ UserSecurity
       <span class="hljs-string">&quot;string&quot;</span>
     ],
     <span class="hljs-attr">&quot;language&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;notifications&quot;</span>: [],
-    <span class="hljs-attr">&quot;activity&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;read&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;notifications&quot;</span>: [
+      {
+        <span class="hljs-attr">&quot;activity&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;read&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+      }
+    ],
     <span class="hljs-attr">&quot;showCardsCountAt&quot;</span>: <span class="hljs-number">0</span>,
     <span class="hljs-attr">&quot;startDayOfWeek&quot;</span>: <span class="hljs-number">0</span>,
     <span class="hljs-attr">&quot;starredBoards&quot;</span>: [
@@ -20457,8 +20819,7 @@ UserSecurity
   <span class="hljs-attr">&quot;loginDisabled&quot;</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;authenticationMethod&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;sessionData&quot;</span>: {
-    <span class="hljs-attr">&quot;totalHits&quot;</span>: <span class="hljs-number">0</span>,
-    <span class="hljs-attr">&quot;lastHit&quot;</span>: <span class="hljs-number">0</span>
+    <span class="hljs-attr">&quot;totalHits&quot;</span>: <span class="hljs-number">0</span>
   },
   <span class="hljs-attr">&quot;importUsernames&quot;</span>: [
     <span class="hljs-string">&quot;string&quot;</span>
@@ -20467,7 +20828,7 @@ UserSecurity
 
 </code></pre>
 <p>A User in wekan</p>
-<h3 id="properties-17">Properties</h3>
+<h3 id="properties-18">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -20485,6 +20846,20 @@ UserSecurity
 <td>false</td>
 <td>none</td>
 <td>the username of the user</td>
+</tr>
+<tr>
+<td>orgs</td>
+<td>[<a href="#schemausersorgs">UsersOrgs</a>]¦null</td>
+<td>false</td>
+<td>none</td>
+<td>the list of organizations that a user belongs to</td>
+</tr>
+<tr>
+<td>teams</td>
+<td>[<a href="#schemausersteams">UsersTeams</a>]¦null</td>
+<td>false</td>
+<td>none</td>
+<td>the list of teams that a user belongs to</td>
 </tr>
 <tr>
 <td>emails</td>
@@ -20572,45 +20947,6 @@ UserSecurity
 </tr>
 </tbody>
 </table>
-<h2 id="tocs_usersemails">UsersEmails</h2>
-<p><a id="schemausersemails"></a>
-<a id="schema_UsersEmails"></a>
-<a id="tocSusersemails"></a>
-<a id="tocsusersemails"></a></p>
-<pre class="highlight tab tab-json"><code>{
-  <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;verified&quot;</span>: <span class="hljs-literal">true</span>
-}
-
-</code></pre>
-<h3 id="properties-18">Properties</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Restrictions</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>address</td>
-<td>string</td>
-<td>true</td>
-<td>none</td>
-<td>The email address</td>
-</tr>
-<tr>
-<td>verified</td>
-<td>boolean</td>
-<td>true</td>
-<td>none</td>
-<td>Has the email been verified</td>
-</tr>
-</tbody>
-</table>
 <h2 id="tocs_usersprofile">UsersProfile</h2>
 <p><a id="schemausersprofile"></a>
 <a id="schema_UsersProfile"></a>
@@ -20624,6 +20960,7 @@ UserSecurity
   <span class="hljs-attr">&quot;fullname&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;showDesktopDragHandles&quot;</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;hideCheckedItems&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">&quot;cardMaximized&quot;</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;hiddenSystemMessages&quot;</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;hiddenMinicardLabelText&quot;</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">&quot;initials&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -20631,9 +20968,12 @@ UserSecurity
     <span class="hljs-string">&quot;string&quot;</span>
   ],
   <span class="hljs-attr">&quot;language&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;notifications&quot;</span>: [],
-  <span class="hljs-attr">&quot;activity&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;read&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;notifications&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;activity&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;read&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }
+  ],
   <span class="hljs-attr">&quot;showCardsCountAt&quot;</span>: <span class="hljs-number">0</span>,
   <span class="hljs-attr">&quot;startDayOfWeek&quot;</span>: <span class="hljs-number">0</span>,
   <span class="hljs-attr">&quot;starredBoards&quot;</span>: [
@@ -20687,7 +21027,7 @@ UserSecurity
 <td>boolean</td>
 <td>false</td>
 <td>none</td>
-<td>does the user want to hide system messages?</td>
+<td>does the user want to show desktop drag handles?</td>
 </tr>
 <tr>
 <td>hideCheckedItems</td>
@@ -20695,6 +21035,13 @@ UserSecurity
 <td>false</td>
 <td>none</td>
 <td>does the user want to hide checked checklist items?</td>
+</tr>
+<tr>
+<td>cardMaximized</td>
+<td>boolean</td>
+<td>false</td>
+<td>none</td>
+<td>has user clicked maximize card?</td>
 </tr>
 <tr>
 <td>hiddenSystemMessages</td>
@@ -20737,20 +21084,6 @@ UserSecurity
 <td>false</td>
 <td>none</td>
 <td>enabled notifications for the user</td>
-</tr>
-<tr>
-<td>activity</td>
-<td>string</td>
-<td>true</td>
-<td>none</td>
-<td>The id of the activity this notification references</td>
-</tr>
-<tr>
-<td>read</td>
-<td>string</td>
-<td>false</td>
-<td>none</td>
-<td>the date on which this notification was read</td>
 </tr>
 <tr>
 <td>showCardsCountAt</td>
@@ -20877,8 +21210,7 @@ UserSecurity
 <a id="tocSuserssessiondata"></a>
 <a id="tocsuserssessiondata"></a></p>
 <pre class="highlight tab tab-json"><code>{
-  <span class="hljs-attr">&quot;totalHits&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-attr">&quot;lastHit&quot;</span>: <span class="hljs-number">0</span>
+  <span class="hljs-attr">&quot;totalHits&quot;</span>: <span class="hljs-number">0</span>
 }
 
 </code></pre>
@@ -20899,19 +21231,172 @@ UserSecurity
 <td>number</td>
 <td>false</td>
 <td>none</td>
-<td>Total hits from last search</td>
+<td>Total hits from last searchquery['members.userId'] = Meteor.userId();<br />last hit that was returned</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tocs_usersorgs">UsersOrgs</h2>
+<p><a id="schemausersorgs"></a>
+<a id="schema_UsersOrgs"></a>
+<a id="tocSusersorgs"></a>
+<a id="tocsusersorgs"></a></p>
+<pre class="highlight tab tab-json"><code>{
+  <span class="hljs-attr">&quot;orgId&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;orgDisplayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+
+</code></pre>
+<h3 id="properties-21">Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>orgId</td>
+<td>string</td>
+<td>true</td>
+<td>none</td>
+<td>The uniq ID of the organization</td>
 </tr>
 <tr>
-<td>lastHit</td>
-<td>number</td>
+<td>orgDisplayName</td>
+<td>string</td>
+<td>true</td>
+<td>none</td>
+<td>The display name of the organization</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tocs_usersteams">UsersTeams</h2>
+<p><a id="schemausersteams"></a>
+<a id="schema_UsersTeams"></a>
+<a id="tocSusersteams"></a>
+<a id="tocsusersteams"></a></p>
+<pre class="highlight tab tab-json"><code>{
+  <span class="hljs-attr">&quot;teamId&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;teamDisplayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+
+</code></pre>
+<h3 id="properties-22">Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>teamId</td>
+<td>string</td>
+<td>true</td>
+<td>none</td>
+<td>The uniq ID of the team</td>
+</tr>
+<tr>
+<td>teamDisplayName</td>
+<td>string</td>
+<td>true</td>
+<td>none</td>
+<td>The display name of the team</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tocs_usersemails">UsersEmails</h2>
+<p><a id="schemausersemails"></a>
+<a id="schema_UsersEmails"></a>
+<a id="tocSusersemails"></a>
+<a id="tocsusersemails"></a></p>
+<pre class="highlight tab tab-json"><code>{
+  <span class="hljs-attr">&quot;address&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;verified&quot;</span>: <span class="hljs-literal">true</span>
+}
+
+</code></pre>
+<h3 id="properties-23">Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>address</td>
+<td>string</td>
+<td>true</td>
+<td>none</td>
+<td>The email address</td>
+</tr>
+<tr>
+<td>verified</td>
+<td>boolean</td>
+<td>true</td>
+<td>none</td>
+<td>Has the email been verified</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tocs_usersprofilenotifications">UsersProfileNotifications</h2>
+<p><a id="schemausersprofilenotifications"></a>
+<a id="schema_UsersProfileNotifications"></a>
+<a id="tocSusersprofilenotifications"></a>
+<a id="tocsusersprofilenotifications"></a></p>
+<pre class="highlight tab tab-json"><code>{
+  <span class="hljs-attr">&quot;activity&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;read&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+
+</code></pre>
+<h3 id="properties-24">Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>activity</td>
+<td>string</td>
+<td>true</td>
+<td>none</td>
+<td>The id of the activity this notification references</td>
+</tr>
+<tr>
+<td>read</td>
+<td>string</td>
 <td>false</td>
 <td>none</td>
-<td>last hit that was returned</td>
+<td>the date on which this notification was read</td>
 </tr>
 </tbody>
 </table>
 <!-- Renderer: Shins v2.6.0 -->
 <!-- Generator: Widdershins v4.0.1 -->
+<!-- backwards compatibility -->
+<!-- backwards compatibility -->
+<!-- backwards compatibility -->
+<!-- backwards compatibility -->
 <!-- backwards compatibility -->
 <!-- backwards compatibility -->
 <!-- backwards compatibility -->

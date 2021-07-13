@@ -147,6 +147,45 @@ Swimlanes.helpers({
     });
   },
 
+  move(toBoardId) {
+    this.lists().forEach(list => {
+      const toList = Lists.findOne({
+        boardId: toBoardId,
+        title: list.title,
+        archived: false,
+      });
+
+      let toListId;
+      if (toList) {
+        toListId = toList._id;
+      } else {
+        toListId = Lists.insert({
+          title: list.title,
+          boardId: toBoardId,
+          type: list.type,
+          archived: false,
+          wipLimit: list.wipLimit,
+        });
+      }
+
+      Cards.find({
+        listId: list._id,
+        swimlaneId: this._id,
+      }).forEach(card => {
+        card.move(toBoardId, this._id, toListId);
+      });
+    });
+
+    Swimlanes.update(this._id, {
+      $set: {
+        boardId: toBoardId,
+      },
+    });
+
+    // make sure there is a default swimlane
+    this.board().getDefaultSwimline();
+  },
+
   cards() {
     return Cards.find(
       Filter.mongoSelector({
@@ -415,8 +454,8 @@ if (Meteor.isServer) {
    */
   JsonRoutes.add('POST', '/api/boards/:boardId/swimlanes', function(req, res) {
     try {
-      Authentication.checkUserId(req.userId);
       const paramBoardId = req.params.boardId;
+      Authentication.checkBoardAccess(req.userId, paramBoardId);
       const board = Boards.findOne(paramBoardId);
       const id = Swimlanes.insert({
         title: req.body.title,
